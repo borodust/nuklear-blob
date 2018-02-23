@@ -3,6 +3,7 @@
   :description "Nuklear IM GUI foreign library collection"
   :license "MIT"
   :defsystem-depends-on (:bodge-blobs-support)
+  :depends-on (:bodge-glad)
   :class :bodge-blob-system
   :libraries (((:darwin :x86-64) "libnuklear.dylib.bodged" "x86_64/")
               ((:darwin :x86) "libnuklear.dylib.bodged" "x86/")
