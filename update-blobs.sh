@@ -21,7 +21,7 @@ for arch in "${!archs[@]}" ; do
     target_dir="$script_dir/${archs[$arch]}"
     mkdir -p "$target_dir"
     for platform in "${!platforms[@]}" ; do
-        lib="lib$name.${platforms[$platform]}.bodged"
+        lib="lib$name.${platforms[$platform]}"
         url="$repository_url/releases/download/$1/$lib-$arch-$platform-$1"
         echo "Downloading $lib from $url"
         if ! wget -O "$target_dir/$lib" -q "$url" ; then
