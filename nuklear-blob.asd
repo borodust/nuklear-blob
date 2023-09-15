@@ -9,6 +9,8 @@
               ((:darwin :x86) "libnuklear.dylib" "x86/")
               ((:unix (:not :darwin) :x86-64) "libnuklear.so" "x86_64/")
               ((:unix (:not :darwin) :x86) "libnuklear.so" "x86/")
+              ((:unix (:not :darwin) :ppc64 :big-endian) "libnuklear.so" "ppc64/")
+              ((:unix (:not :darwin) :ppc64 :little-endian) "libnuklear.so" "ppc64le/")
               ((:windows :x86-64) "libnuklear.dll" "x86_64/")
               ((:windows :x86) "libnuklear.dll" "x86/"))
   :perform (asdf:load-op :before (o c)
